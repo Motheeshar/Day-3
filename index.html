@@ -1,113 +1,130 @@
+<!-- 
+  
+  This is the project-based Lab on the following concepts 
+  1. HTML Block elements
+  2. In line elements 
+
+
+Project description: Build a webpage on your hobbies
+
+Challenge 1: Use appropriate Block elements while building your webpage.
+
+Challenge 2: Use appropriate in line elements while building your hobbies webpage.
+
+Important note: Add comments above the tag to mention the HTML element type 
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Hobbies</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: black;
-    }
-    .form {
-      position: relative;
-      width: 400px;
-      height: 1000px;
-      background: #000;
-      box-shadow: 0 0 50px #0ef;
-      border-radius: 20px;
-      padding: 40px;
-    }
-    /* Define the font size for the counter in the ordered list */
-    .form h1 {
-      color: red;
-      text-align: center;
-      font-variant: small-caps;
-    }
-    .form h3 {
-      color: #e0aa3e;
-      font-variant: small-caps;
-    }
-    .form p {
-      color: blue;
-    }
-  </style>
-</head>
-<body>
-  <!-- Challenge 1: Using Block Elements -->
-  <div class="form">
-    <h1><!-- Header -->My Hobbies</h1>
-    <p style="color: blue;">
-      <!-- Paragraph -->I enjoy various activities in my free time. Here are some of my favorite hobbies:
-    </p>
-    <ol>
-      <li>
-        <div class="hobby">
-          <!-- Division -->
-          <h3><!-- Header -->1. Listening Music</h3>
-          <img
-            width="100"
-            height="100"
-            src="https://cdn3.vectorstock.com/i/1000x1000/27/57/luxury-music-logo-design-golden-shiny-musical-vector-20332757.jpg"
-            alt="Listening Music"
-          />
-          <p>
-            <!-- Paragraph -->Music is a great way to relax. I love listening to my favorite tunes, especially when working or during leisure time.
-          </p>
-        </div>
-      </li>
-      <li>
-        <div class="hobby">
-          <!-- Division -->
-          <h3><!-- Header -->2. Playing game</h3>
-          <!-- Challenge 2: Using In-line Elements -->
-          <div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Hobbies</title>
+    <style>
+      /* Define the font size for the counter in the ordered list */
+      ol {
+        counter-reset: my-counter;
+        list-style-type: none;
+      }
+
+      li::before {
+        content: counter(my-counter) ".";
+        counter-increment: my-counter;
+        margin-right: 0.5em; /* Adjust the space between the counter and content */
+        font-size: 1.2em; /* Set the font size for the counter */
+        font-weight: bold; /* Optional: Set font weight if desired */
+      }
+      .arm h1{
+        color: red;
+        font-variant: small-caps;
+      }
+
+      .arm p{
+        color: blue;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Challenge 1: Using Block Elements -->
+    <div class="arm">
+      <h1><!-- Header -->My Hobbies</h1>
+
+      <p style="color: blue;">
+        <!-- Paragraph -->I enjoy various activities in my free time. Here are
+        some of my favorite hobbies:
+      </p>
+      <ol>
+        <li>
+            <div class="hobby">
+              <!-- Division -->
+              <h3><!-- Header -->Listening Music</h3>
+              <img
+                width="100"
+                height="100"
+                src="https://cdn3.vectorstock.com/i/1000x1000/27/57/luxury-music-logo-design-golden-shiny-musical-vector-20332757.jpg"
+                alt="external-songs-dance-flaticons-flat-flat-icons"
+              />
+              <p>
+                <!-- Paragraph -->Music is a great way to relax. I love listening
+                to my favorite tunes, especially when working or during leisure
+                time.
+              </p>
+            </div>
+          </li>
+        <li>
+          <div class="hobby">
+            <!-- Division -->
+            <h3><!-- Header -->Playing game</h3>
+            <!-- Challenge 2: Using In-line Elements -->
+            <div>
+              <img
+                width="100"
+                height="100"
+                src="https://upload.wikimedia.org/wikipedia/en/6/63/Battleground_Mobile_India.webp"
+                alt="car-racing"
+              />
+              <p>
+                <!-- Paragraph --> Playing games will give me stress free and gives me some happiness.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="hobby">
+            <!-- Division -->
+            <h3><!-- Header -->Watching Sports TV</h3>
             <img
               width="100"
               height="100"
-              src="https://s3.india.com/wp-content/uploads/2023/03/BGMI.jpg"
-              alt="Playing game"
+              src="https://img.icons8.com/stickers/100/track-and-field-skin-type-1.png"
+              alt="track-and-field-skin-type-1"
             />
             <p>
-              <!-- Paragraph -->Playing games will give me stress-free and gives me some happiness.
+              <!-- Paragraph -->I am a sports enthusiast. Watching sports on TV
+              allows me to stay updated with the latest matches and events.
             </p>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="hobby">
-          <!-- Division -->
-          <h3><!-- Header -->3. Watching Sports TV</h3>
-          <img
-            width="100"
-            height="100"
-            src="https://media.istockphoto.com/id/627660950/photo/students-watching-american-football-game-at-home.jpg?s=612x612&w=0&k=20&c=5CYTY2frRCiAklHf7eq_Cb2GS2Wt9xyVNV62B3Onc4I="
-            alt="Watching Sports TV"
-          />
-          <p>
-            <!-- Paragraph -->I am a sports enthusiast. Watching sports on TV allows me to stay updated with the latest matches and events.
-          </p>
-        </div>
-      </li>
-      <li>
-        <div class="hobby">
-          <!-- Division -->
-          <h3><!-- Header -->4. Watching about the latest tech gadgets</h3>
-          <img
-            width="100"
-            height="100"
-            src="https://s3.india.com/wp-content/uploads/2023/03/BGMI.jpg"
-            alt="Latest tech gadgets"
-          />
-          <p>
-            <!-- Paragraph -->Staying updated with the latest technology is a passion. I enjoy watching videos and reading about the newest tech gadgets on various platforms.
-          </p>
-        </div>
-      </li>
-    </ol>
-  </div>
-</body>
+        </li>
+        <li>
+          <div class="hobby">
+            <!-- Division -->
+            <h3><!-- Header -->Watching about latest tech gadgets</h3>
+            <img
+              width="100"
+              height="100"
+              src="https://img.icons8.com/color/100/gadgets.png"
+              alt="gadgets"
+            />
+            <p>
+              <!-- Paragraph -->Staying updated with the latest technology is a
+              passion. I enjoy watching videos and reading about the newest tech
+              gadgets on various platforms.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </body>
 </html>
